@@ -1,0 +1,15 @@
+Package: ShinySAMPDavid
+Type: Package
+Title: This package is built for the Shiny sampling assignment
+Version: 0.1.0
+Author: Hyeonjoon David Park
+Maintainer: Hyeonjoon David Park <hjpark@ou.edu>
+Description: This is a package built for the Shiny sampling assignment
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,40 @@
+---
+title: "ShinySAMPDavid"
+author: "Hyeonjoon David Park"
+date: "`r Sys.Date()`"
+output: 
+    html_document: rmarkdown::html_vignette
+    df_print: paged
+    highlights: pygments
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+vignette: >
+  %\VignetteIndexEntry{ShinySAMPDavid}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+runtime: shiny
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ShinySAMPDavid)
+```
+
+This vignette briefly introduces basic construction and usage of the package "ShinySAMPDavid" I made.
+
+# Using the Shiny server
+
+Using the shiny dashboard template create widgets to input `n`, `iter`, `mu`, $\sigma_{ij}$ the output will be the plots: 2d density plot of $\bar{X}$ and histogram of $\theta$. I will leave it to you to make the suitable bounds on the widget variables (remember that the covariance matrix is symmetrical)
+
+```{r}
+ui = uifunction(300,7000,0,0,200,500,50)
+
+shinyApp(ui, server)
+```
